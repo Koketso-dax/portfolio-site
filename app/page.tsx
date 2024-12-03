@@ -35,7 +35,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="relative w-48 h-48 mx-auto mb-8">
             <Image
-              src="https://github.com/Koketso-dax/portfolio-site/blob/310a0d065633fa0b04eb2d699e9daaa4fdca5b33/public/profile.png"
+              src="/profile.jpg"
               alt="Koketso Diale Photo"
               width={164}
               height={164}
