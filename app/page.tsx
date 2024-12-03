@@ -35,10 +35,10 @@ export default function Home() {
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="relative w-48 h-48 mx-auto mb-8">
             <Image
-              src="/profile.jpg"
+              src="https://avatars.githubusercontent.com/u/71882721?s=400&u=974f56f3ea685006141c8890095a176d2275eb41&v=4"
               alt="Koketso Diale Photo"
-              width={164}
-              height={164}
+              width={174}
+              height={174}
               className="rounded-full retro-border"
             />
           </div>
