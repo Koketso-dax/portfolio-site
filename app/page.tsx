@@ -5,6 +5,7 @@ import { GradientText } from "./components/gradient-text"
 import { TypingAnimation } from "./components/typing-animation"
 import Script from 'next/script';
 
+
 export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -18,12 +19,38 @@ export default function Home() {
       "addressRegion": "Gauteng",
       "addressCountry": "South Africa"
     },
-    "url": "https://portfolio.koketsodiale.tech",
+    "url": "http://koketso.is-a.dev",
     "sameAs": [
       "https://www.linkedin.com/in/koketso-diale-0b3374138",
       "https://github.com/Koketso-dax"
     ]
   };
+  const projects = [
+    {
+      id: 1,
+      title: "SpyGame",
+      description: "A web based game wherein players must root out a spy in their midst. The game is played in rounds, with each player taking turns to vote on who they believe the spy is.",
+      image: "https://github.com/Koketso-dax/spygame/raw/main/screenshot.png",
+      link: "https://spygame-fawn.vercel.app",
+      technologies: ["React", "Next.js", "TypeScript"]
+    },
+    {
+      id: 2,
+      title: "Prosper Loan Data Analysis",
+      description: "A comprehensive analysis of loan data to identify trends and insights, utilizing Python and Pandas.",
+      image: "https://github.com/Koketso-dax/prosper-data/raw/main/screenshot.png",
+      link: "https://koketso-dax.github.io/prosper-data/",
+      technologies: ["Python", "Pandas", "Matplotlib"]
+    },
+    {
+      id: 3,
+      title: "Portfolio Website",
+      description: "A personal portfolio website showcasing my skills and projects, built with Next.js and Tailwind CSS.",
+      image: "https://github.com/Koketso-dax/portfolio-site/raw/main/screenshot.png",
+      link: "https://portfolio-site-6203f2agl-koketsodaxs-projects.vercel.app/",
+      technologies: ["Next.js", "Tailwind CSS"]
+    }
+  ];
   return (
     <div className="space-y-24">
       <Script
@@ -57,16 +84,16 @@ export default function Home() {
       <section id="projects">
         <h2 className="text-4xl font-bold mb-12 text-center">Featured Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((project) => (
-            <Card key={project} className="retro-shadow hover:translate-x-1 hover:-translate-y-1 transition-transform">
+          {projects.map((project) => (
+            <Card key={project.id} className="retro-shadow hover:translate-x-1 hover:-translate-y-1 transition-transform">
               <CardHeader>
-                <CardTitle className="text-2xl">Project {project}</CardTitle>
-                <CardDescription className="font-sans italic">A brief description of the project</CardDescription>
+                <CardTitle className="text-2xl">{project.title}</CardTitle>
+                <CardDescription className="font-sans italic">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="aspect-video bg-muted mb-4"></div>
-                <p className="mb-4 text-muted-foreground font-sans">Technologies used: React, Next.js, TypeScript</p>
-                <Button variant="outline" className="retro-border w-full">View Project</Button>
+                <p className="mb-4 text-muted-foreground font-sans">{project.technologies.join(", ")}</p>
+                <Button variant="outline" className="retro-border w-full" ref={project.link}>View Project</Button>
               </CardContent>
             </Card>
           ))}
