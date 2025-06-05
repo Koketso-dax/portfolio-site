@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from "./components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./components/ui/card"
 import { GradientText } from "./components/gradient-text"
@@ -19,7 +20,7 @@ export default function Home() {
       "addressRegion": "Gauteng",
       "addressCountry": "South Africa"
     },
-    "url": "http://koketso.is-a.dev",
+    "url": "https://portfolio-site-git-main-koketsodaxs-projects.vercel.app/",
     "sameAs": [
       "https://www.linkedin.com/in/koketso-diale-0b3374138",
       "https://github.com/Koketso-dax"
@@ -28,7 +29,7 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "SpyGame",
+      title: "Spy Game",
       description: "A web based game wherein players must root out a spy in their midst. The game is played in rounds, with each player taking turns to vote on who they believe the spy is.",
       image: "https://github.com/Koketso-dax/spygame/raw/main/screenshot.png",
       link: "https://spygame-fawn.vercel.app",
@@ -37,7 +38,7 @@ export default function Home() {
     {
       id: 2,
       title: "Prosper Loan Data Analysis",
-      description: "A comprehensive analysis of loan data to identify trends and insights, utilizing Python and Pandas.",
+      description: "A comprehensive analysis of loan data to identify trends and insights, utilizing Python and Pandas. This project includes data cleaning, visualization, and statistical analysis to understand borrower behavior and loan performance.",
       image: "https://github.com/Koketso-dax/prosper-data/raw/main/screenshot.png",
       link: "https://koketso-dax.github.io/prosper-data/",
       technologies: ["Python", "Pandas", "Matplotlib"]
@@ -45,10 +46,10 @@ export default function Home() {
     {
       id: 3,
       title: "Portfolio Website",
-      description: "A personal portfolio website showcasing my skills and projects, built with Next.js and Tailwind CSS.",
+      description: "A personal portfolio website showcasing my skills and projects, built with Next.js and Tailwind CSS. This site features a modern design, responsive layout, and interactive elements to highlight my work and experience.",
       image: "https://github.com/Koketso-dax/portfolio-site/raw/main/screenshot.png",
-      link: "https://portfolio-site-6203f2agl-koketsodaxs-projects.vercel.app/",
-      technologies: ["Next.js", "Tailwind CSS"]
+      link: "https://portfolio-site-git-main-koketsodaxs-projects.vercel.app/",
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript"]
     }
   ];
   return (
@@ -89,11 +90,18 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="text-2xl">{project.title}</CardTitle>
                 <CardDescription className="font-sans italic">{project.description}</CardDescription>
+                <Image
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-t-lg"
+                loading="lazy"
+              />
               </CardHeader>
               <CardContent>
-                <div className="aspect-video bg-muted mb-4"></div>
                 <p className="mb-4 text-muted-foreground font-sans">{project.technologies.join(", ")}</p>
-                <Button variant="outline" className="retro-border w-full" ref={project.link}>View Project</Button>
+                <Link href={project.link} passHref>
+                  <Button variant="outline" className="retro-border w-full">View Project</Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
@@ -122,41 +130,43 @@ export default function Home() {
             <CardDescription className="font-sans italic">I&apos;m always open to new opportunities and collaborations</CardDescription>
           </CardHeader>
           <CardContent>
-            <form className="space-y-6">
+            <form
+            className="space-y-6"
+            action={`mailto:lanchaster.k@gmail.com`}
+            method="POST"
+            encType="text/plain">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  className="w-full p-3 bg-background retro-border focus:translate-x-1 focus:-translate-y-1 transition-transform" 
-                  required 
-                />
+                <input
+                type="text"
+                id="name"
+                name="name"
+                className="w-full p-3 bg-background retro-border focus:translate-x-1 focus:-translate-y-1 transition-transform"
+                required/>
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  className="w-full p-3 bg-background retro-border focus:translate-x-1 focus:-translate-y-1 transition-transform" 
-                  required 
-                />
+                <input
+                type="email"
+                id="email"
+                name="email"
+                className="w-full p-3 bg-background retro-border focus:translate-x-1 focus:-translate-y-1 transition-transform"
+                required/>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows={4} 
-                  className="w-full p-3 bg-background retro-border focus:translate-x-1 focus:-translate-y-1 transition-transform" 
-                  required
-                ></textarea>
-              </div>
-              <Button type="submit" className="w-full retro-border hover:translate-x-1 hover:-translate-y-1 transition-transform">
-                Send Message
-              </Button>
-            </form>
+    <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      rows={4} 
+      className="w-full p-3 bg-background retro-border focus:translate-x-1 focus:-translate-y-1 transition-transform" 
+      required
+    ></textarea>
+  </div>
+  <Button type="submit" className="w-full retro-border hover:translate-x-1 hover:-translate-y-1 transition-transform">
+    Send Message
+  </Button>
+</form>
           </CardContent>
         </Card>
       </section>
