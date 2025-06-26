@@ -3,6 +3,7 @@ import './globals.css'
 import { ThemeProvider } from "./components/theme-provider"
 import Header from './components/header'
 import { Metadata } from 'next'
+import GoogleAnalytics from './components/google-analytics'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const merriweather = Merriweather({ weight: ['300', '400', '700', '900'], subsets: ['latin'], variable: '--font-merriweather' })
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Koketso Diale | Backend, DevOps, Data Science Specialist',
     description: 'Explore the portfolio of Koketso Diale, a Backend Developer, DevOps Engineer, and Data Scientist from Pretoria, South Africa.',
-    images: ['https://www.koketso-diale.com/twitter-image.jpg'],
+    images: ['https://x.com/frostxbyte47/photo'],
     creator: '@frostbyte47',
   },
   icons: {
@@ -49,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${merriweather.variable} font-serif`}>
+        <GoogleAnalytics />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           <main className="container mx-auto px-4 py-8">

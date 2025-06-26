@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
                 hostname: "github.com",
                 port: "",
                 pathname: "/Koketso-dax/**",
+            },
+            {
+                protocol: "https",
+                hostname: "x.com",
+                port: "",
+                pathname: "/frostxbyte47/photo",
             }
         ],
     },
