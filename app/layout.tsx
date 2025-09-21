@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_ZA',
-    url: 'https://portfolio.koketsodiale.tech',
+    url: 'https://koketso.is-a.dev',
     siteName: 'Koketso Diale Portfolio',
     title: 'Koketso Diale | Backend, DevOps, Data Science Specialist',
     description: 'Explore the portfolio of Koketso Diale, a Backend Developer, DevOps Engineer, and Data Scientist from Pretoria, South Africa.',
