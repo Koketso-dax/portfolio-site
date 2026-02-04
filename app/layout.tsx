@@ -63,7 +63,7 @@ export default function RootLayout({
     },
     "url": "https://koketso.is-a.dev",
     "sameAs": [
-      "https://www.linkedin.com/in/koketso-diale-0b3374138",
+      "https://www.linkedin.com/in/koketso-diale",
       "https://github.com/Koketso-dax",
       "https://x.com/frostxbyte47"
     ]
