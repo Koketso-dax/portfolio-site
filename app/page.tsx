@@ -4,28 +4,11 @@ import { Button } from "./components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./components/ui/card"
 import { GradientText } from "./components/gradient-text"
 import { TypingAnimation } from "./components/typing-animation"
-import Script from 'next/script';
+
 
 
 export default function Home() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Koketso Diale",
-    "jobTitle": "Backend Developer, DevOps Engineer, Data Scientist",
-    "description": "Specialist in Backend Development, DevOps, and Data Science from Pretoria, South Africa",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Pretoria",
-      "addressRegion": "Gauteng",
-      "addressCountry": "South Africa"
-    },
-    "url": "https://portfolio-site-git-main-koketsodaxs-projects.vercel.app/",
-    "sameAs": [
-      "https://www.linkedin.com/in/koketso-diale-0b3374138",
-      "https://github.com/Koketso-dax"
-    ]
-  };
+
   const projects = [
     {
       id: 1,
@@ -54,11 +37,6 @@ export default function Home() {
   ];
   return (
     <div className="space-y-24">
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
       <section id="hero" className="text-center py-24 border-b border-border">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="relative w-48 h-48 mx-auto mb-8">

@@ -4,15 +4,17 @@ import { ThemeProvider } from "./components/theme-provider"
 import Header from './components/header'
 import { Metadata } from 'next'
 import GoogleAnalytics from './components/google-analytics'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const merriweather = Merriweather({ weight: ['300', '400', '700', '900'], subsets: ['latin'], variable: '--font-merriweather' })
 
 export const metadata: Metadata = {
-  title: 'Koketso Diale | Backend Developer, DevOps Engineer, Data Scientist',
-  description: 'Portfolio of Koketso Diale, a specialist in Backend Development, DevOps, and Data Science from Pretoria, South Africa.',
+  title: 'Koketso Diale',
+  applicationName: 'Koketso Diale',
+  description: 'Portfolio website of Koketso Diale, a specialist in Backend Development, DevOps, and Data Science from Pretoria, South Africa.',
   keywords: ['Koketso Diale', 'Backend Developer', 'DevOps Engineer', 'Data Scientist', 'Pretoria', 'South Africa'],
-  authors: [{ name: 'Koketso Diale' }],
+  authors: [{ name: 'Koketso Diale'}],
   creator: 'Koketso Diale',
   openGraph: {
     type: 'website',
@@ -47,8 +49,33 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Koketso Diale",
+    "jobTitle": "Backend Developer, DevOps Engineer, Data Scientist",
+    "description": "Specialist in Backend Development, DevOps, and Data Science from Pretoria, South Africa",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pretoria",
+      "addressRegion": "Gauteng",
+      "addressCountry": "South Africa"
+    },
+    "url": "https://koketso.is-a.dev",
+    "sameAs": [
+      "https://www.linkedin.com/in/koketso-diale-0b3374138",
+      "https://github.com/Koketso-dax",
+      "https://x.com/frostxbyte47"
+    ]
+  };
   return (
     <html lang="en" suppressHydrationWarning>
+    
+    <Script id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          />
+
       <body className={`${inter.variable} ${merriweather.variable} font-serif`}>
         <GoogleAnalytics />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
