@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   creator: 'Koketso Diale',
   openGraph: {
     siteName: 'Koketso Diale Portfolio',
-    title: 'Koketso Diale | Backend, DevOps, Data Science Specialist',
+    title: 'Koketso Diale',
     description: 'Explore the portfolio of Koketso Diale, a Backend Developer, DevOps Engineer, and Data Scientist from Pretoria, South Africa.',
     images: [
       {
@@ -39,6 +39,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  /** 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -58,13 +59,14 @@ export default function RootLayout({
       "https://x.com/frostxbyte47"
     ]
   };
+  */
   return (
     <html lang="en" suppressHydrationWarning>
     
     <head>
     <Script id="structured-data"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata) }}
           />
     </head>
 

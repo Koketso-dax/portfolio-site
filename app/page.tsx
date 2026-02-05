@@ -41,22 +41,27 @@ export default function Home() {
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="relative w-48 h-48 mx-auto mb-8">
             <Image
-              src="https://avatars.githubusercontent.com/u/71882721?s=400&u=974f56f3ea685006141c8890095a176d2275eb41&v=4"
+              src="https://avatars.githubusercontent.com/u/71882721?s=400&u=790a2f8135b5ff15bf8a071ed38810949c4ae460&v=4"
               alt="Koketso Diale Photo"
-              width={174}
-              height={174}
+              width={200}
+              height={200}
               className="rounded-full retro-border"
             />
           </div>
+          <h1 className="text-6xl font-bold mb-4 leading-tight">
+            Koketso Diale
+          </h1>
           <h1 className="text-6xl font-bold mb-4 leading-tight">
             <GradientText text="Creative" /> Developer & Digital <GradientText text="Artist"/>
           </h1>
           <p className="text-xl mb-8 text-muted-foreground font-sans italic min-h-[3rem]">
             <TypingAnimation text="Crafting digital experiences with a classic touch" />
           </p>
+          <Link href={"#contact"}>
           <Button size="lg" className="retro-border hover:translate-x-1 hover:-translate-y-1 transition-transform">
             Get in touch
           </Button>
+          </Link>
         </div>
       </section>
 
@@ -69,8 +74,8 @@ export default function Home() {
                 <CardTitle className="text-2xl">{project.title}</CardTitle>
                 <CardDescription className="font-sans italic">{project.description}</CardDescription>
                 <Image
-                width={30}
-                height={30}
+                width={300}
+                height={200}
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover rounded-t-lg"
