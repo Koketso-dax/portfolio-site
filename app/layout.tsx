@@ -17,9 +17,6 @@ export const metadata: Metadata = {
   authors: [{ name: 'Koketso Diale'}],
   creator: 'Koketso Diale',
   openGraph: {
-    type: 'website',
-    locale: 'en_ZA',
-    url: 'https://koketso.is-a.dev',
     siteName: 'Koketso Diale Portfolio',
     title: 'Koketso Diale | Backend, DevOps, Data Science Specialist',
     description: 'Explore the portfolio of Koketso Diale, a Backend Developer, DevOps Engineer, and Data Scientist from Pretoria, South Africa.',
@@ -31,13 +28,6 @@ export const metadata: Metadata = {
         alt: 'Koketso Diale Portfolio',
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Koketso Diale | Backend, DevOps, Data Science Specialist',
-    description: 'Explore the portfolio of Koketso Diale, a Backend Developer, DevOps Engineer, and Data Scientist from Pretoria, South Africa.',
-    images: ['https://x.com/frostxbyte47/photo'],
-    creator: '@frostbyte47',
   },
   icons: {
     icon: '/favicon.ico',
@@ -71,10 +61,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
     
+    <head>
     <Script id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
           />
+    </head>
 
       <body className={`${inter.variable} ${merriweather.variable} font-serif`}>
         <GoogleAnalytics />
@@ -85,6 +77,7 @@ export default function RootLayout({
           </main>
         </ThemeProvider>
       </body>
+
     </html>
   )
 }

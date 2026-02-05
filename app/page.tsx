@@ -69,6 +69,8 @@ export default function Home() {
                 <CardTitle className="text-2xl">{project.title}</CardTitle>
                 <CardDescription className="font-sans italic">{project.description}</CardDescription>
                 <Image
+                width={30}
+                height={30}
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover rounded-t-lg"
