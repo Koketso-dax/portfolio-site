@@ -4,7 +4,6 @@ import { ThemeProvider } from "./components/theme-provider"
 import Header from './components/header'
 import { Metadata } from 'next'
 import GoogleAnalytics from './components/google-analytics'
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const merriweather = Merriweather({ weight: ['300', '400', '700', '900'], subsets: ['latin'], variable: '--font-merriweather' })
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Koketso Diale'}],
   creator: 'Koketso Diale',
   openGraph: {
-    siteName: 'Koketso Diale Portfolio',
+    siteName: 'Koketso Diale',
     title: 'Koketso Diale',
     description: 'Explore the portfolio of Koketso Diale, a Backend Developer, DevOps Engineer, and Data Scientist from Pretoria, South Africa.',
     images: [
@@ -62,13 +61,6 @@ export default function RootLayout({
   */
   return (
     <html lang="en" suppressHydrationWarning>
-    
-    <head>
-    <Script id="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata) }}
-          />
-    </head>
 
       <body className={`${inter.variable} ${merriweather.variable} font-serif`}>
         <GoogleAnalytics />
