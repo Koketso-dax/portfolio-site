@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Explore the portfolio of Koketso Diale, a Backend Developer, DevOps Engineer, and Data Scientist from Pretoria, South Africa.',
     images: [
       {
-        url: 'https://github.com/Koketso-dax/portfolio-site/blob/2f4db035cb3d603d02e76f5fb1c4ebd5bf043c3e/public/profile.jpg',
+        url: '/profile.jpg',
         width: 164,
         height: 164,
         alt: 'Koketso Diale Portfolio',
