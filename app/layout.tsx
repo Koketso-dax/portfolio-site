@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const merriweather = Merriweather({ weight: ['300', '400', '700', '900'], subsets: ['latin'], variable: '--font-merriweather' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('koketso.is-a.dev'),
+  metadataBase: new URL('https://koketso.is-a.dev'),
   title: 'Koketso Diale',
   description: 'Portfolio website of Koketso Diale a developer based in Pretoria, South Africa.',
   keywords: ['Koketso Diale', 'Backend Developer', 'DevOps Engineer', 'Data Scientist', 'Pretoria', 'South Africa'],
