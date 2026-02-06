@@ -9,22 +9,22 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const merriweather = Merriweather({ weight: ['300', '400', '700', '900'], subsets: ['latin'], variable: '--font-merriweather' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('koketso.is-a.dev'),
   title: 'Koketso Diale',
-  applicationName: 'Koketso Diale',
-  description: 'Portfolio website of Koketso Diale, a specialist in Backend Development, DevOps, and Data Science from Pretoria, South Africa.',
+  description: 'Portfolio website of Koketso Diale a developer based in Pretoria, South Africa.',
   keywords: ['Koketso Diale', 'Backend Developer', 'DevOps Engineer', 'Data Scientist', 'Pretoria', 'South Africa'],
   authors: [{ name: 'Koketso Diale'}],
   creator: 'Koketso Diale',
   openGraph: {
     siteName: 'Koketso Diale',
     title: 'Koketso Diale',
-    description: 'Explore the portfolio of Koketso Diale, a Backend Developer, DevOps Engineer, and Data Scientist from Pretoria, South Africa.',
+    description: 'Explore the portfolio of Koketso Diale, a Backend Developer and Data Scientist from Pretoria, South Africa.',
     images: [
       {
         url: '/profile.jpg',
         width: 164,
         height: 164,
-        alt: 'Koketso Diale Portfolio',
+        alt: 'Profile',
       },
     ],
   },
