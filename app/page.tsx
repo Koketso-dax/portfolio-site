@@ -33,6 +33,14 @@ export default function Home() {
       image: "https://github.com/Koketso-dax/sap-practice_exam/raw/main/screenshot.png",
       link: "https://sap-practice-exam.vercel.app/",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript"]
+    },
+    {
+      id: 4,
+      title: "New Azania Market",
+      description: "An online store powered by the fakestoreapi and Supabase.",
+      image: "https://github.com/Koketso-dax/new_azania_market/raw/main/screenshot.png",
+      link: "https://new-azania-market.vercel.app/",
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript"]
     }
   ];
   return (
