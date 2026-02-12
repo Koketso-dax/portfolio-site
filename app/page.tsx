@@ -28,10 +28,10 @@ export default function Home() {
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "A personal portfolio website showcasing my skills and projects, built with Next.js and Tailwind CSS. This site features a modern design, responsive layout, and interactive elements to highlight my work and experience.",
-      image: "https://github.com/Koketso-dax/portfolio-site/raw/main/screenshot.png",
-      link: "https://portfolio-site-git-main-koketsodaxs-projects.vercel.app/",
+      title: "SAP Practice Exams",
+      description: "A simple examination interface I built whilst preparing for my SAP integration developer & database admin exams. Clones of the actual exams used for practice purposes.",
+      image: "https://github.com/Koketso-dax/sap-practice_exam/raw/main/screenshot.png",
+      link: "https://sap-practice-exam.vercel.app/",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript"]
     }
   ];
